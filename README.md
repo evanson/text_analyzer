@@ -43,6 +43,6 @@ run chmod a+x application.py
 
 run ./application.py
 
-open [http://localhost:8888/] from your browser
+open [http://localhost:8888/]() from your browser
 
 
