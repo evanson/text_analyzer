@@ -8,13 +8,15 @@
   </head>
   <body role="document">
     <div class="container">
-      <table><thead><tr><th>Word</th><th>Frequency</th></tr></thead>
-        <tbody>
-          {% for (word, count) in words%}    
-            <tr><td>{{ word }}</td><td>{{count}}</td></tr>
-          {% end %}
-        </tbody>
-      </table>
+      <div id="wordcount">
+        <table><thead><tr><th>Word</th><th>Frequency</th></tr></thead>
+          <tbody>
+            {% for (word, count) in words%}    
+              <tr><td>{{ word }}</td><td>{{count}}</td></tr>
+             {% end %}
+          </tbody>
+        </table>
+      </div>
     </div>
     <script src="https://code.jquery.com/jquery.js" type="text/javascript"></script>
     <script src="{{ static_url("js/bootstrap.min.js")}}" type="text/javascript"></script>

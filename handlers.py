@@ -28,9 +28,10 @@ class HomeHandler(BaseHandler):
             else:
                 word_count.setdefault(word, 1)
 
-        ## Run db updates to thread to reduce response time
+        ## Run db updates in thread to reduce response time
         d = threads.deferToThread(run_update, self.db, word_count)
-
+        d.addErrback(catchError)
+        
         sorted_words = sorted(word_count.iteritems(), key=operator.itemgetter(1))
         self.write(json.dumps(sorted_words))
 
@@ -39,6 +40,10 @@ class WordHandler(BaseHandler):
         words = get_word_frequencies(self.db)
         sorted_words = sorted(words.iteritems(), key=operator.itemgetter(1))
         self.render("words.html", words=sorted_words)
+
+
+def catchError(e):
+    pass
 
 handlers = [
     (r"/", HomeHandler),
