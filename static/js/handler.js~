@@ -1,0 +1,26 @@
+$(document).ready(function() {
+    $('#submit').click(function() {
+        $(this).attr('disabled', true);
+    });
+
+    $("#box").submit(function (e) {
+        e.preventDefault();
+        var formData = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: "/",
+            data: formData
+        }).done(processWords);
+    });
+
+    function processWords(data){
+        $("#submit").removeAttr("disabled");
+        words = $.parseJSON(data);
+        var list = $('<ul></ul>');
+        jQuery.each(words, function(index, word) {
+            var li = $('<li></li>').text(word[0] + ": " + word[1])
+            list.append(li);
+        });
+        $("#wordcount").append(list);
+    }
+});

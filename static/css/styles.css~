@@ -1,0 +1,42 @@
+body {
+    background: #EEEEEE;
+    color: #000000;
+    margin: 12px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+textarea {
+    font-family: Georgia, serif;
+    font-size: 11pt;
+}
+
+#body {
+    width: 100%;
+    margin: auto;
+}
+
+#content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#box textarea{
+    width: 100%;
+    line-height: 14pt;
+    height: auto;
+    padding: 5px;
+
+	-moz-border-radius: 0.2em;
+	-ms-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+	border-radius: 0.2em;
+
+
+    background: -moz-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+
+}

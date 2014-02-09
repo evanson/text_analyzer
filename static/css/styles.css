@@ -1,0 +1,93 @@
+body {
+    background: #EEEEEE;
+    #background: #FFFFFF;
+    color: #000000;
+    margin: 12px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+textarea {
+    font-family: Georgia, serif;
+    font-size: 14px;
+}
+
+#body {
+    width: 100%;
+    margin: auto;
+}
+
+#content {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#box textarea{
+    width: 100%;
+    line-height: 14pt;
+    height: auto;
+    padding: 5px;
+
+	-moz-border-radius: 0.2em;
+	-ms-border-radius: 0.2em;
+	-webkit-border-radius: 0.2em;
+	-o-border-radius: 0.2em;
+	border-radius: 0.2em;
+
+
+    background: -moz-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -webkit-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -ms-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+	background: linear-gradient( #CCCCCC, #FFFFFF 0.6em ) repeat scroll 0 0 transparent;
+
+}
+
+a {
+    float: right;
+}
+
+.container p {
+    font-size: 16px;
+}
+
+
+div.container table thead {
+	background-color: #3924D6;
+	color: white;
+
+}
+
+div.container table thead th {
+	padding: 0.5em 1em;
+
+}
+
+div.container table thead th .current {
+    padding-right: 12px;
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+
+div.container table tbody tr {}
+
+div.container table tbody tr:nth-of-type( 2n ) {
+	background-color: #E5E5FF;
+
+}
+
+div.container table tbody tr:hover {
+	background-color: #FFF4A8;
+
+}
+
+div.container table tbody td {
+	padding: 0.4em 1em;
+    text-align: left;
+
+}
+
+#wordcount {
+    margin-top: 5px;
+    background: #FFFFFF;
+}
