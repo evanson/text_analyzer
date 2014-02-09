@@ -22,7 +22,7 @@ def run_update(db, words):
 
     if update:
         exc_temp_insert_query = temp_insert_query[:-1]
-        db.execute("CREATE TABLE temp_words (word TEXT, frequency INT)")
+        db.execute("CREATE TEMPORARY TABLE temp_words (word TEXT, frequency INT)")
         db.execute(exc_temp_insert_query)
         db.execute("UPDATE words w, temp_words tw SET w.frequency=w.frequency+tw.frequency WHERE w.word=tw.word")
         db.execute("DROP TABLE temp_words")
