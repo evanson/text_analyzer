@@ -1,22 +1,22 @@
-Text Analyzer
+### Text Analyzer
 
 A simple web app to analyze text and show words used and their frequency of use.
 
 
-1. Dependencies
+#### Dependencies
 
-python 2.7,
-MySQL,
-Tornado python framework,
-Packages MySQL-python and torndb
+* python 2.7
+* MySQL
+* Tornado python framework
+* Packages MySQL-python and torndb
 
 
-2. Installation
+#### Installation
 
 Install the above dependencies
 
 
-3. Setup
+#### Setup
 
 Connect to MySQL as a user that can create databases and users and create a database and user 'text_analyzer'
 
@@ -35,10 +35,14 @@ Import the provided schema.sqll to create tables in the new database
  mysql --user=text_analyzer --password=text_analyzer --database=text_analyzer < text_analyzer.sql
 
 
-4. Run the application
+#### Run the application
 
-cd to the app's directory\n
-run chmod a+x application.py\n
-run ./application.py\n
-open http://localhost:8888/ from your browser\n
+cd to the app's directory
+
+run chmod a+x application.py
+
+run ./application.py
+
+open http://localhost:8888/ from your browser
+
 
