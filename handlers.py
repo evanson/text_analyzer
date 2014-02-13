@@ -1,5 +1,6 @@
 import operator
 import json
+import logging
 import tornado.web
 import tornado.platform.twisted
 tornado.platform.twisted.install()
@@ -31,7 +32,7 @@ class HomeHandler(BaseHandler):
         ## Run db updates in thread to reduce response time
         d = threads.deferToThread(run_update, self.db, word_count)
         d.addErrback(catchError)
-        
+
         sorted_words = sorted(word_count.iteritems(), key=operator.itemgetter(1))
         self.write(json.dumps(sorted_words))
 
@@ -43,7 +44,7 @@ class WordHandler(BaseHandler):
 
 
 def catchError(e):
-    pass
+    logging.error(str(e))
 
 handlers = [
     (r"/", HomeHandler),
